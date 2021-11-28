@@ -11,19 +11,27 @@ class _InitPageState extends State<InitPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
+        body: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+              image: AssetImage('images/tardis.jpg'),
+              fit: BoxFit.cover,
+            )),
             child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        ElevatedButton(
-            child: const Text('How to connect board'), onPressed: () {}),
-        ElevatedButton(
-            child: const Text('Sonic Screwdriver'),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SonicPage()));
-            })
-      ],
-    )));
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                ElevatedButton(
+                    child: const Text('How to connect board'),
+                    onPressed: () {}),
+                ElevatedButton(
+                    child: const Text('Sonic Screwdriver'),
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => SonicPage()));
+                    })
+              ],
+            )));
   }
 }
