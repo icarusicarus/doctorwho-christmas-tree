@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sonic_screwdriver">
+    <uses-permission android:name="android.permission.BLUETOOTH" />  
+	  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />  
+	  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
    <application
         android:label="sonic_screwdriver"
         android:icon="@mipmap/ic_launcher">

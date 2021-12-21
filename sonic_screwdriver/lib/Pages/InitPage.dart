@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../Pages/BluetoothPage.dart';
 import '../Pages/SonicPage.dart';
 
 class InitPage extends StatefulWidget {
@@ -23,8 +24,13 @@ class _InitPageState extends State<InitPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton(
-                    child: const Text('How to connect board'),
-                    onPressed: () {}),
+                    child: const Text('Connect Board'),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BluetoothPage()));
+                    }),
                 ElevatedButton(
                     child: const Text('Sonic Screwdriver'),
                     onPressed: () {
